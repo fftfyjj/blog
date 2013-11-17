@@ -1,13 +1,64 @@
 ---
-layout: BlogPage
-title: Your New Jekyll Site
+layout: framework
+title: Fighting For The Future!
 ---
-
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1>Fighting For The Future! </h1>
+  </div>
 </div>
+<br/>
+<br/>
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-md-offset-3">
+<pre>
+(define (where-should-you-go? name)
+	(cond ((is-interest-in-computer name) (goto <a href="{{site.baseurl}}/blog" class="btn btn-primary btn-xs" role="button">Blogs</a>))
+    	((wants-to-get-more-about-me name) (goto <a href="{{site.baseurl}}/about" class="btn btn-primary btn-xs" role="button">AboutMe</a>))
+        ((likes-to-read-books name) (goto <a href="{{ site.baseurl}}/books" class="btn btn-primary btn-xs" role="button">Books</a>))
+        (else (display "Thank you!" ))))
+</pre>
+</div>
+</div>
+</div>
+
+<br/>
+<br/>
+<blockquote class="pull-right">
+   <p>Qui non proficit deficit.</p>
+   <p>不进则退</p>
+</blockquote>
+
+<!--<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img data-src="holder.js/300x200" alt="..." >
+      <div class="caption text-center">
+        <h3>Aritcles</h3>
+        <p></p>
+        <p><a href="#" class="btn btn-primary" role="Go To">Button</a> </p>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img data-src="holder.js/300x200" alt="...">
+      <div class="caption text-center">
+        <h3>Books</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="Go To">Button</a> </p>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img data-src="holder.js/300x200" alt="...">
+      <div class="caption text-center">
+        <h3>About Me</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-primary" role="Go To">Button</a> </p>
+      </div>
+    </div>
+  </div>
+</div>-->

@@ -1,0 +1,63 @@
+---
+layout: framework
+--- 
+
+<!--TEXT BEGIN--> 
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 text-left">
+     
+      <ol class="breadcrumb">
+         <li><a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+         <li class="active"><span class="glyphicon glyphicon-folder-open"></span> {{ page.title}}</li>
+      </ol>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center"><a href="{{ site.baseurl }}/{{page.kind}}">{{page.title}}</a></h1>
+    </div>
+  </div>
+  <div class="row">
+<!--    <div class="col-md-2 col-sm-2 hidden-xs text-right">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Blogs</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+    </div>-->
+    <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-2 col-sm-offset-2 text-left"> {{ content }} </div>
+  </div>
+  
+  {% if paginator.total_pages > 1 %}
+  <div class="row">
+    <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-2 col-sm-offset-2 text-left"> 
+    	<ul class="pagination">
+        {% if paginator.previous_page %}
+  		<li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
+        {% else %}
+        <li class="disabled"><a href="#">&laquo;</a></li>
+        {% endif %}
+        {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %} 
+        <li class="active"><a href="">{{ page }} <span class="sr-only">(current)</span></a></li>
+        {% elsif page == 1 %}
+        <li><a href="{{ '/blog/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+        {% else %}
+        <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+        {% endif %}
+        {% endfor %}
+        {% if paginator.next_page %}
+        <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a></li>
+        {% else %}
+        <li class="disabled"><a href="#">&raquo;</a></li>
+        {% endif %}
+    	</ul>
+    </div>
+  </div>
+	{% endif %}
+  
+</div>
+
+

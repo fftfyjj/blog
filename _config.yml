@@ -1,5 +1,5 @@
-paginate: 2
-paginate_path: "blog/page:num"
+paginate: 7
+paginate_path: "/blog/page:num"
 name: Your New Jekyll Site
 markdown: redcarpet
 pygments: true

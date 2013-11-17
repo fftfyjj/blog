@@ -1,9 +1,25 @@
 ---
-layout: default
+layout: framework
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-<div class="post">
-{{ content }}
+<!--TEXT BEGIN-->
+<br />
+<div class="container">
+  <div class="row">
+  	<div class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 text-left">
+    <ol class="breadcrumb">
+  	<li><a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+  	<li><a href="{{ site.baseurl }}/blog"><span class="glyphicon glyphicon-folder-open"></span> Articles</a></li>
+    <li class="active"><span class="glyphicon glyphicon-file"></span> {{ page.title }}</li>
+	</ol>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center"><a href="{{ site.baseurl }}/">{{page.title}}</a></h1>
+    </div>
+  </div>	
+  <div class="row">
+    <div class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1 text-left"> {{ content }} </div>
+    </div>
+  </div>
 </div>

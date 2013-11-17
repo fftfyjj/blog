@@ -1,0 +1,32 @@
+---
+layout: index
+title: Articles
+---
+
+
+
+{% for post in paginator.posts %}
+<div class="panel panel-default">
+<div class="panel-heading">
+  <div class="row">
+    <div class="col-md-12"> <strong>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></strong> {% for category in post.categories %} <small><span class="label label-default">{{ category }}</span></small> {% endfor %} </div>
+  </div>
+</div>
+<div class="panel-body">
+  <div class="row">
+    <div class="col-md-12">{{ post.excerpt }}</div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 text-right"><a href="{{ site.baseurl }}{{ post.url }}">more...</a></div>
+  </div>
+  </div>
+</div>
+{% endfor %}
+
+<!--  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>--> 
+

@@ -1,0 +1,31 @@
+---
+layout: framework
+--- 
+<!--TEXT BEGIN--> 
+<br />
+<div class="container">
+<div class="row">
+  <div class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
+    <ol class="breadcrumb">
+      <li ><a href="{{ site.baseurl }}/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+      <li class="active"><span class="glyphicon glyphicon-file"></span> {{ page.title }}</li>
+    </ol>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-center"><a href="{{ site.baseurl }}/{{page.kind}}">{{page.title}}</a></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="row"> 
+    <!--    <div class="col-md-2 col-sm-2 hidden-xs text-right">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Blogs</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+      </ul>
+    </div>-->
+    <div class="col-md-8 col-sm-8 col-xs-12 col-md-offset-2 col-sm-offset-2 text-left"> {{ content }} </div>
+  </div>
+</div>
