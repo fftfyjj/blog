@@ -1,0 +1,10 @@
+---
+layout: post
+title: "New Blog"
+category: "Mind"
+tags: []
+date: 2013-11-19 00:35:00 +0800
+---
+新博客建成，这次认真的学习了jekyll，并且整个主题模版都是利用bootstrap自己组装起来。虽然耗费了不少时间，但算是学习了一些前端的东西，了解了下bootstrap、jekyll等工具。
+
+忙碌总是好的！

@@ -43,7 +43,7 @@ task :post do
     post.puts "date: #{datetime}"
     post.puts "---"
   end
-  system "open -a textmate #{filename}"
+  system "emacs-24.3 #{filename}"
 end # task :post
 
 # Usage: rake page title="about.html"
@@ -73,7 +73,7 @@ end # task :page
 desc "Launch preview environment"
 task :preview do
   system "pkill ruby"
-  system "jekyll serve -w --baseurl='' &"
+  system "jekyll serve -w --baseurl='' >/dev/null &"
   system "sleep 3"
   system "open -a safari http://0.0.0.0:4000"
 end # task :preview
