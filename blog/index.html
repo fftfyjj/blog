@@ -6,7 +6,7 @@ title: Articles
 <div class="panel panel-default">
 <div class="panel-heading">
   <div class="row">
-    <div class="col-md-12"> <strong>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></strong> {% for category in post.categories %} <small><span class="label label-default">{{ category }}</span></small> {% endfor %} </div>
+    <div class="col-md-12"> <span class="text-muted">{{ post.date | date_to_string }}  </span>&nbsp; <strong><a href="{{ post.url }}">{{ post.title }}</a></strong> {% for category in post.categories %} <small><span class="label label-default">{{ category }}</span></small> {% endfor %} </div>
   </div>
 </div>
 <div class="panel-body">

@@ -23,6 +23,7 @@ task :post do
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
+    datetime = Time.now
   rescue => e
     puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
     exit -1
@@ -37,12 +38,12 @@ task :post do
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts 'description: ""'
     post.puts "category: \"#{category.gsub(/-/,' ')}\""
     post.puts "tags: #{tags}"
-	post.puts "date: #{date}"
+    post.puts "date: #{datetime}"
     post.puts "---"
   end
+  system "open -a textmate #{filename}"
 end # task :post
 
 # Usage: rake page title="about.html"
@@ -66,6 +67,7 @@ task :page do
     post.puts "title: \"#{title}\""
     post.puts "---"
   end
+  system "open -a textmate #{filename}"
 end # task :page
 
 desc "Launch preview environment"
@@ -91,6 +93,19 @@ task :commit do
   puts status ? "Success" : "Failed"
 end
 
+def ask(message, valid_options)
+  if valid_options
+    answer = get_stdin("#{message} #{valid_options.to_s.gsub(/"/, '').gsub(/, /,'/')} ") while !valid_options.include?(answer)
+  else
+    answer = get_stdin(message)
+  end
+  answer
+end
+
+def get_stdin(message)
+  print message
+  STDIN.gets.chomp
+end
 
 #Load custom rake scripts
 Dir['_rake/*.rake'].each { |r| load r }
