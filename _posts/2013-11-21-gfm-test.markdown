@@ -9,6 +9,6 @@ Line1 with no space
 Line2...
 
 ```Java
-Class java{
+public class XXX{
 }
 ```
