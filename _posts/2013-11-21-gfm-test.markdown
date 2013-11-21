@@ -8,7 +8,7 @@ date: 2013-11-21 23:51:38 +0800
 Line1 with no space
 Line2...
 
-```Java
+```java
 public class XXX{
 }
 ```
