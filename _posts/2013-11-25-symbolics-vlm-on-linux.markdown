@@ -85,3 +85,6 @@ genera.coldLoad.geometry: 800x600
 
 如果没错，你就会看到上一篇文章中图所示的显示窗口。Good Luck! 你会有成就感的。下一篇会设置genera系统，新建一个自己的site（虽然我目前也还不清楚具体是啥含义），实现访问文档，以及其他功能。 
 
+
+----
+重大补充，发现github有个类似的项目，全自动帮安装一个open genera。利用virtual box虚拟机运行ubuntu 7.10，然后运行snap4。地址[https://github.com/ynniv/opengenera](https://github.com/ynniv/opengenera)。
