@@ -4,3 +4,4 @@ name: Your New Jekyll Site
 markdown: redcarpet
 pygments: true
 baseurl: ''
+timezone: Asia/Chongqing
