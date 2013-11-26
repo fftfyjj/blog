@@ -46,7 +46,20 @@ RUBOUT: Delete
 **设置映射**  
 
 可以用`xmodmap -e "keycode 110 = a"`这类命令一条条设置。然后用`xmodmap -pke >~/.Xmodmap`命令导出布局，并将`xmodmap .Xmodmap`命令加入到.xinitrc文件中，保证下次自动加载布局。这样就完成了！
-不过也可以先导出保存.Xmodmap文件，然后用文本编辑器修改keycode keysym的对应条目。例如我的.Xmodmap文件内容就是（不要copy复制过去用，keycode很可能和你键盘不同，直接使用会布局混乱）：
+不过也可以先导出保存.Xmodmap文件，然后用文本编辑器修改keycode keysym的对应条目。
+
+**参考资料**
+
+http://askubuntu.com/questions/93772/where-do-i-find-a-list-of-all-x-keysyms-these-days
+http://wiki.linuxquestions.org/wiki/List_of_Keysyms_Recognised_by_Xmodmap
+http://askubuntu.com/questions/24916/how-do-i-remap-certain-keys
+https://wiki.archlinux.org/index.php/Xmodmap
+http://world.std.com/~jdostale/kbd/SpaceCadet.html
+http://stevelosh.com/blog/2012/10/a-modern-space-cadet/
+
+**.Xmodmap参考**
+
+.Xmodmap文件内容（不要copy复制过去用，keycode很可能和你键盘不同，直接使用会布局混乱）：
 <pre>
 keycode   8 =
 keycode   9 = Escape
@@ -297,5 +310,4 @@ keycode 253 =
 keycode 254 =
 keycode 255 =
 </pre>
-
 
